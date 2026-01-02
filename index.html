@@ -5,32 +5,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
     <link rel="icon" type = "image/jpg" href="/media/favicon.png">
+
 </head>
 <body >
+
+    <header style="background-color: wheat;">
+        <h1>Welcome to Bro Code</h1>
+        <a href="">Home</a>
+        <a href="">About Us</a>
+        <a href="">Products</a>
+        <a href="">Contact Us</a>
+        <hr>
+    </header>
+
+
+    <main>
     <script src ="script.js"></script>
     <h1 >this is title</h1>
     <p id="p1" class="even">elit. Ma! Uta natus soluta susdistinctio? amigo</p>
 
     <br>
-
+    <!-- image -->
     <h1>this is a cute dog</h1>
     <img src="/media/images.jpg"
     alt="this is a picture of a dog"
     height="200">
 
     <br>
+    <!-- audio -->
     <audio controls >
         <source src="/media/audio.mp3">
     </audio>
 
     <br>
 
+    <!-- video -->
     <video  width ="500px" controls autoplay loop>
         <source src="/media/video.mp4" type="video/mp4">
     </video>
 
-    <br>
+
+<!-- text formatting -->
+
+    <p>this is normal text</p>
+    <p>this is <bold>bold</bold> text</p>
+    <p>this is <i>italic</i> text</p>
+    <p>this is <u>underlined</u> text</p>
+    <p>this is <del>deleted</del> text</p>
+    <p>this is <big>big</big> text</p>
+    <p>this is <small>small</small> text</p>
+    <p>this is <sub>sub</sub> text</p>
+    <p>this is <sup>sup</sup> text</p>
+    <p>this is <tt>monospaced</tt> text</p>
+    <p>this is <mark>marked</mark> text</p>
+
+
+
+
+    <!-- span tag -->
+    <!-- div tag -->
+    <h1><span style = "background-color: yellow;">this is a span title</span></h1>
+    
+    <h1><div style="background-color: greenyellow;">this is a div title</div></h1>
+    
+    <h1><p1>this is a span sentence</p1></h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In recusandae, perspiciatis magni praesentium ipsa quisquam sed, magnam reiciendis distinctio, <span style="background-color: brown;"> ipsam tenetur similique exercitationem a minus voluptas tempora nostrum alias.</span></p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, et tenetur eveniet odit quaerat <div style="background-color: blueviolet;">ullam eos fugiat laudantium dolorum quibusdam unde, rem maiores illo impedit cum sapiente voluptatem sit provident.</div></p>
+
+    <!-- Unorderered list -->
+     <h4>Groceries</h4>
+     <ul>
+        <li>milk</li>
+        <li>eggs</li>
+        <li>bread</li>
+        <li>coffee</li>
+        <ul>
+
+            <li>coffee beans</li>
+            <li>creamer</li>
+            <li>sugar</li>
+        </ul>
+     </ul>
+
+
+     <!-- ordered list -->
+
+     <ol>
+        <li>eat breakfast</li>
+        <li>go to class</li>
+        <li>walk dog</li>
+        <li>work</li>
+     </ol>
+
+     <!-- Description list -->
+
+     <dl style="background-color: orange;border: 2px solid;">
+        <dt>dragon </dt>  <!-- description title -->
+        <dd>
+        a mythical monster resembling a giant reptile, sometimes shown as having wings. In European tradition the dragon is typically fire-breathing and tends to symbolize chaos or evil, whereas in East Asia it is usually a beneficent symbol of fertility, associated with water and the heavens.</dd>
+        <dt>phoenix</dt>  
+        <dd> a unique bird that lived for five or six centuries in the Arabian desert, after this time burning itself on a funeral pyre and rising from the ashes with renewed youth to live through another cycle.</dd>
+     </dl>
+
+     <!-- table -->
+      <table border="1" style="background-color: paleturquoise;">
+
+        <tr style="background-color: bisque;">
+            <th width="100">Sunday</th>
+            <th width="100">Monday </th>
+            <th width="100">tuesday</th>
+            <th width="100">wednesday</th>
+            <th width="100">thursday</th>
+            <th width="100">friday</th>
+            <th width="100">saturday</th>
+
+
+        </tr>
+
+        <tr align="center" style="background-color: aquamarine;">
+
+            <td>Closed</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>10-2</td>
+        </tr>
+
+      </table>
+      <br>
+
+
+      <!-- button -->
+
+      <!-- <a href="page2.html"> -->
+
+      <button onclick="dosomething()" style="font-size: large;background-color: darkgoldenrod; color: aqua;border-radius: 25px;">click me </button>
+
+
+      <p id ="greeting"> Hello</p>
+      <script>
+        function dosomething(){
+            document.getElementById("greeting").innerHTML ="good bye"
+        }
+      </script>
+
+        </a>
+
+
+        <!-- form -->
+         <form action="index.php" method ="POST" enctype="multipart/form-data">
+
+            <!-- username -->
+            <label for="username">username:</label>
+            <input type="text" id ="username" placeholder="enter username"  minLength ="6" maxlength="19" required>
+            <br>
+
+
+            <!-- password -->
+            <label for="password">password: </label>
+            <input type="password" id="password" placeholder="enter the password" minLength ="6" maxlength="19" required> <br>
+
+            <!-- email address -->
+            <label for="email">email: </label>
+            <input type="email" id="email" placeholder="enter the email" required><br>
+
+            <!-- ph number -->
+            <label for="phone">Phone number: </label>
+            <input type="tel" id="phone" placeholder="12345-67890" pattern="[0-9]{5}-[0-9]{5}">
+
+            <!-- date -->
+            <label for="bday">birthdate: </label>
+            <input type="date" id="bday"><br>
+
+            <!-- number -->
+
+            <label for="quantity">quantity: </label>
+            <input type="number" id="quantity" min="0" max="99" value="1"><br>
+
+            <!-- radio button -->
+            <label for="Mr.">Mr.</label>
+            <input type="radio" id="Mr." value="Mr." name="title">
+
+            <label for="Ms.">Ms.</label>
+            <input type="radio" id="Ms." value="Ms." name="title">
+            <label for="Phd">phd</label>
+            <input type="radio" id="Phd" value="Phd" name="title"> 
+            
+            <br>
+
+            <!-- dropdown menu -->
+            <label for="Payment">Payment</label>
+            <select name="Payment" id="Payment">
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+                <option value="amex">amex</option>
+            </select>
+            <br>
+
+            <!-- checkbox -->
+             <label for="Subscribe">Subscribe</label>
+             <input type="checkbox" id="Subscribe"><br>
+
+             <label for="comment">comment: </label>
+             <textarea name="comment" id="" rows="3" cols="25"></textarea><br>
+
+
+             <label for="file">file: </label>
+             <input type="file" id="file" accept="image/png,image/jpeg"><br>
+
+
+
+
+            <input type="submit">
+            <input type="reset"><br>
+         </form>
+         </main>
+
+         <footer>
+            <hr>
+            author: arookiecoder <br>
+            &copy; Copyright Reservered <br>
+            <a href="mailto: support@arookiecoder.tech">support@arookiecoder.tech</a>
+         </footer>
+
 
 
 
