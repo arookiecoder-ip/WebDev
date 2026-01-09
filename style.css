@@ -5,6 +5,7 @@
 
 body{
     background-color: grey;
+   
 }
 h1{
     color: white;
@@ -79,7 +80,8 @@ h1{
 
 #float1{
     margin: 20px;
-    border: 3px;
+    border: 3px solid;
+    display: flow-root;
 }
 
 #img1{
@@ -91,4 +93,10 @@ h1{
     float: right;
     margin: 10px;
 
+}
+
+#overflow{
+    border: 2px solid;
+    height: 75px;
+    overflow: auto;
 }
